@@ -1,0 +1,8 @@
+<mat-toolbar color="primary" class="header-toolbar">
+  <span class="header-logo   d-none d-md-block">Users Dashboard</span>
+  <mat-form-field appearance="fill" class="header-search mt-4" *ngIf="!hiddenInput()">
+    <mat-label>Search User</mat-label>
+    <input appAutoFocus matInput #searchInput (keyup)="onKeyUp(searchInput.value)" placeholder="Enter User ID">
+  </mat-form-field>
+</mat-toolbar>
+

@@ -1,0 +1,23 @@
+<mat-card class="user-card fade-in mb-4" [style.animation-delay]="index * 0.1 + 's'">
+  <div class="d-flex align-items-center p-2">
+    <div class="flex-shrink-0 me-4">
+      <img mat-card-avatar [src]="user.avatar" alt="Photo of {{ user.first_name }}" class="rounded-circle" style="width: 80px; height: 80px; object-fit: cover;">
+    </div>
+    <div class="flex-grow-1">
+      <div class="row g-1">
+        <div class="col-4">
+          <div class="fw-bold">ID</div>
+          <div>{{ user.id }}</div>
+        </div>
+        <div class="col-8 col-md-4">
+          <div class="fw-bold">First Name</div>
+          <div>{{ user.first_name }}</div>
+        </div>
+        <div class="col-4 d-none d-md-block">
+          <div class="fw-bold">Last Name</div>
+          <div>{{ user.last_name }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-card>

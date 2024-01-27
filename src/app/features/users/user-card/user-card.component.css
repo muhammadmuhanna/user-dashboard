@@ -1,0 +1,77 @@
+.user-card {
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  animation-name: slideInFromLeft;
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+
+
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.user-card .d-flex {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.user-card .flex-shrink-0 {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-card .rounded-circle {
+  width: auto;
+  height: auto;
+  max-width: 80px;
+  max-height: 80px;
+  object-fit: cover;
+}
+
+.user-card .fw-bold {
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.user-card .row {
+  padding: 0.5rem 1rem;
+}
+
+.user-card .col-4 {
+  padding: 0.25rem;
+}
+
+.user-card div {
+  word-wrap: break-word;
+}
+
+.user-card .fw-bold {
+  margin-bottom: 0.25rem;
+}
+
+.user-card div > div {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .user-card {
+    margin: 1rem;
+  }
+
+  .user-card .flex-shrink-0 {
+    margin-right: 2rem;
+  }
+
+  .user-card .col-4 {
+    padding: 0.5rem;
+  }
+}

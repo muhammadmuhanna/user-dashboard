@@ -1,0 +1,27 @@
+
+<mat-card>
+  <mat-card-content class="content">
+    <div class="container">
+      <div *ngIf="isLoading; else userProfile">
+        <div class="d-flex justify-content-start align-items-start" style="height: 100vh;">
+          <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        </div>
+      </div>
+      <ng-template #userProfile>
+        <div *ngIf="!isLoading">
+          <div class="row row-cols-1 g-3">
+            <div class="col" *ngFor="let user of users; let i = index">
+              <app-user-card  [user]="user"  [index]="i" (click)="goToUserDetail(user.id)" ></app-user-card>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </div>
+  </mat-card-content>
+  <mat-card-footer>
+    <app-paginator [length]="totalUsers"
+                   [pageSize]="pageSize"
+                   (pageChange)="onPageChange($event)">
+    </app-paginator>
+  </mat-card-footer>
+</mat-card>
